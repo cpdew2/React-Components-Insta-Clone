@@ -5,9 +5,9 @@ import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
 
 import "./Posts.css";
-const Posts = props => {
+const Post = props => {
 
-const [like, setLike] =useState(props.post.like);
+const [like, setLike] =useState(props.dataItems.like);
 const [isLike, setIsLiked] = useState(false);
 const onToggle =() => {
   setIsLiked(!isLike)
@@ -17,29 +17,29 @@ const onToggle =() => {
     setIsLiked(like + 1)
   }
   }
-// pass props in this file to
+// pass props in this file tost
   // set up state for the likes
 
   return (
     <div className="post-border">
       <PostHeader
-        username={props.post.username}
+        username={props.dataItems.username}
         thumbnailUrl={
-          props.post.thumbnailUrl
+          props.dataItems.thumbnailUrl
         }
       />
       <div className="post-image-wrapper">
         <img
           alt="post thumbnail"
           className="post-image"
-          src={props.post.imageUrl}
+          src={props.dataItems.imageUrl}
         />
       </div>
       <LikeSection like = {like}
       onToggle = {onToggle}/>
       <CommentSection
-        postId={props.post.imageUrl}
-        comments={props.post.comments}
+        postId={props.dataItems.imageUrl}
+        comments={props.dataItems.comments}
       />
     </div>
   );
