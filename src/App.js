@@ -22,6 +22,7 @@ const App = () => {
       <PostsPage data = {data}/>
       <LikeSection />
       {/* Add imported components here to render them */}
+      
     </div>
   );
 };
