@@ -1,5 +1,5 @@
 // You will add code in this file
-import React from "react";
+import React, { useState }from "react";
 import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
@@ -8,7 +8,15 @@ import "./Posts.css";
 const Post = props => {
 
 const [like, setLike] =useState(props.post.like);
-
+const [isLike, setIsLiked] = useState(false);
+const onToggle =() => {
+  setIsLiked(!isLike)
+  if (isLike ===true) {
+    setLike(like -1);
+  } else {
+    setIsLiked(like + 1)
+  }
+  }
 // pass props in this file to
   // set up state for the likes
 
@@ -28,7 +36,7 @@ const [like, setLike] =useState(props.post.like);
         />
       </div>
       <LikeSection like = {like}
-      setLike = {setLike}/>
+      onnToggle = {onToggle}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
