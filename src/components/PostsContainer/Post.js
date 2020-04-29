@@ -5,7 +5,7 @@ import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
 
 import "./Posts.css";
-const[like, setLike] =useState(props.post)
+const [like, setLike] =useState(props.post.like)
 console.log(props);
 
 const [isLiked, setIsLiked] = useState(props.post)
@@ -37,7 +37,8 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection increasedLikes = {increasedLikes}like={like}/>
+      <LikeSection like = {like}
+      setLike = {setLike}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}

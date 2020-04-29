@@ -9,6 +9,11 @@ const PostsPage = () => {
   // set up state for your data
   return (
     <div className="posts-container-wrapper">
+      {data.map(dataItems => {
+        return (
+          <div><Post dataItems={dataItems}/></div>
+        )
+      })
       {/* map through data here to return a Post and pass data as props to Post */}
     </div>
   );
