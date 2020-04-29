@@ -9,7 +9,7 @@ import "./App.css";
 import PostsPage from "./components/PostsContainer/PostsPage.js";
 import SearchBar from "./components/SearchBar/SearchBarContainer.js";
 import LikeSection from "./components/PostsContainer/LikeSection";
-import dummyData from "./dummyData";
+import dummyData from "./dummy-data.js";
 // import the PostsPage and SearchBar and add them to the App
 
 

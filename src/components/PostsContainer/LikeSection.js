@@ -7,14 +7,7 @@ import React, { useState } from "react";
 
 const LikeSection = props => {
 const [isLike, setIsLiked] = useState(false);
-const onToggle =() => {
-  setIsLiked(!isLike)
-  if (isLike ===true) {
-    setLike(like -1);
-  } else {
-    setIsLiked(like + 1)
-  }
-  }
+
 }
   return (
     <div>

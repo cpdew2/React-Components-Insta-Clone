@@ -5,7 +5,7 @@ import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
 
 import "./Posts.css";
-const Post = props => {
+const Posts = props => {
 
 const [like, setLike] =useState(props.post.like);
 const [isLike, setIsLiked] = useState(false);
@@ -36,7 +36,7 @@ const onToggle =() => {
         />
       </div>
       <LikeSection like = {like}
-      onnToggle = {onToggle}/>
+      onToggle = {onToggle}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
