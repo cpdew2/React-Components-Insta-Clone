@@ -8,6 +8,7 @@ import React, { useState } from "react";
 const LikeSection = props => {
 const [isLike, setIsLiked] = useState(false);
 const onToggle =() => {
+  setIsLiked(!isLike)
   if (isLike ===true) {
     setLike(like -1);
   } else {
@@ -22,13 +23,13 @@ const onToggle =() => {
         key="likes-icons-container"
       >
         <div className="like-section-wrapper">
-          <i className="far fa-heart" onClick={props.increaseLikes} />
+          <i className="far fa-heart" />
         </div>
         <div className="like-section-wrapper">
           <i className='far fa-comment' />
         </div>
       </div>
-      <p className="like-number">{props.like} likes</p>
+      <p className="like-number">{props.like} like</p>
     </div>
   )
 

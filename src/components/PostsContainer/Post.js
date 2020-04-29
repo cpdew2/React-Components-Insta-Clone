@@ -5,21 +5,11 @@ import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
 
 import "./Posts.css";
-const [like, setLike] =useState(props.post.like)
-console.log(props);
+const Post = props => {
 
-const [isLiked, setIsLiked] = useState(props.post)
-
-const increasedLikes =() => {
-  if (isLiked === true) {
-    setIsLiked(like -1);
-  }else{
-    setIsLiked(like +1);
-  }
-  }
+const [like, setLike] =useState(props.post.like);
 
 // pass props in this file to
-const Post = props => {
   // set up state for the likes
 
   return (
