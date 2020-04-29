@@ -5,6 +5,8 @@ import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
 
 import "./Posts.css";
+const[like, setLike] =useState(props.post)
+console.log(props);
 
 const [isLiked, setIsLiked] = useState(props.post)
 
