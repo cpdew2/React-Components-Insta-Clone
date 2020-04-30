@@ -6,8 +6,9 @@ import PostHeader from "./PostHeader";
 
 import "./Posts.css";
 const Post = props => {
+console.log(props);
 
-const [like, setLike] =useState(props.dataItems.like);
+const [like, setLike] =useState(props.dataItems.likes);
 const [isLike, setIsLiked] = useState(false);
 const onToggle =() => {
   setIsLiked(!isLike)
@@ -35,8 +36,8 @@ const onToggle =() => {
           src={props.dataItems.imageUrl}
         />
       </div>
-      <LikeSection like = {like}
-      onToggle = {onToggle}/>
+      <LikeSection like = {like}/>
+      
       <CommentSection
         postId={props.dataItems.imageUrl}
         comments={props.dataItems.comments}
