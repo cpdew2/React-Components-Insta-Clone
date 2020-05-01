@@ -8,7 +8,8 @@ import React, { useState } from "react";
 
 const LikeSection = props => {
 console.log(props.like)
-const [onToggle] = useState();
+const onToggle = useState();
+console.log(onToggle)
 
   return (
     <div>
@@ -17,7 +18,7 @@ const [onToggle] = useState();
         key="likes-icons-container"
       >
         <div className="like-section-wrapper" >
-          <i onClick = {onToggle} className="far fa-heart" />
+          <i onClick = {props.onToggle} className="far fa-heart" />
         </div>
         <div className="like-section-wrapper">
           <i className='far fa-comment' />

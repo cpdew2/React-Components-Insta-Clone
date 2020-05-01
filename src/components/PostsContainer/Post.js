@@ -15,9 +15,11 @@ const onToggle =() => {
   if (isLike ===true) {
     setLike(like -1);
   } else {
-    setIsLiked(like + 1)
-  }
+    setLike(like +1)
+      }
+      console.log(like)
   };
+  
 // pass props in this file tost
   // set up state for the likes
 
@@ -36,7 +38,7 @@ const onToggle =() => {
           src={props.dataItems.imageUrl}
         />
       </div>
-      <LikeSection like = {like}/>
+      <LikeSection like = {like} onToggle = {onToggle} />
       
       <CommentSection
         postId={props.dataItems.imageUrl}
