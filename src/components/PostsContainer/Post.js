@@ -17,7 +17,7 @@ const onToggle =() => {
   } else {
     setIsLiked(like + 1)
   }
-  }
+  };
 // pass props in this file tost
   // set up state for the likes
 

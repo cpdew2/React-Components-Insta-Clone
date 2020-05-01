@@ -2,13 +2,13 @@
 // console.log your props and see how to add likes to this component so that it will update when you click the icon.
 // HINT: You will need to add an onClick event pass through your props and update the hard coded Likes
 import React, { useState } from "react";
+
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
 
 const LikeSection = props => {
 console.log(props.like)
-
-
+const [onToggle] = useState();
 
   return (
     <div>
@@ -17,7 +17,7 @@ console.log(props.like)
         key="likes-icons-container"
       >
         <div className="like-section-wrapper" >
-          <i onClick = {() => onToggle()} className="far fa-heart" />
+          <i onClick = {onToggle} className="far fa-heart" />
         </div>
         <div className="like-section-wrapper">
           <i className='far fa-comment' />
